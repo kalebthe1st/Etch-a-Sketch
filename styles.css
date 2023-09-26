@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    height: 0;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    border: 1px solid red;
+    height: 80vh;
+}
+
+.row {
+    display: flex;
+    height: 25%;
+    
+}
+
+.col {
+    border: 1px solid red;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+}
