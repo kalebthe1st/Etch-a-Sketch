@@ -5,22 +5,53 @@
 }
 
 .container {
-    width: 50%;
+    width: 70%;
     margin: 1rem auto;
-    /* border: 1px solid red; */
-    height: 20vh;
+    border: 1px solid #eee;
+    height: 50vh;
+    display: flex;
+    overflow: hidden;
     
+box-shadow:  5px 4px 5px 4px #eee;
 }
 
 .row {
     display: flex;
-    height: 25%;
-    
+    flex-direction: column;
+    height: 100%;
+    flex:1;
 }
 
 .col {
-    border: 1px solid red;
-    width: 100%;
-    height: auto;
+    border: 1px solid transparent;
     
+    
+
+    padding:.15rem;
+    flex-basis:100%;
+    
+}
+.buttons{
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 1rem;
+}
+button{
+    padding: 1rem;
+    
+
+}
+.size{
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    justify-content: center;
+    gap: 1rem;
+ 
+}
+input{
+    padding: 1rem;
 }
