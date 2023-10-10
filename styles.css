@@ -5,53 +5,110 @@
 }
 
 .container {
-    width: 70%;
+    width: 52%;
     margin: 1rem auto;
     border: 1px solid #eee;
-    height: 50vh;
+    height: 65vh;
     display: flex;
     overflow: hidden;
-    
-box-shadow:  5px 4px 5px 4px #eee;
+    box-shadow: 5px 4px 5px 4px #eee;
 }
 
 .row {
     display: flex;
     flex-direction: column;
     height: 100%;
-    flex:1;
+    flex: 1;
 }
 
 .col {
     border: 1px solid transparent;
-    
-    
+    padding: .15rem;
+    flex-basis: 100%;
 
-    padding:.15rem;
-    flex-basis:100%;
-    
 }
-.buttons{
-    
+
+.buttons {
+
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 32px;
     justify-content: center;
     gap: 1rem;
 }
-button{
+
+button {
     padding: 1rem;
-    
+
 
 }
-.size{
+
+.size {
     display: flex;
     flex-direction: row;
-    margin-top: 70px;
+    margin-top: 98px;
     justify-content: center;
     gap: 1rem;
- 
+    align-items: center;
+
 }
-input{
+
+input {
     padding: 1rem;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.btn-hover {
+    width: 123px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover.color-7 {
+    color: #485563;
+}
+.btn-hover.color-6 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }

@@ -1,37 +1,50 @@
 
 setSize(16);
 function setSize(input) {
+
     for (let n = 0; n < input; n++) {
 
-        const cont = document.querySelector('.container');
-        const rowDiv = document.createElement('div');
+        window.cont = document.querySelector('.container');
+        window.rowDiv = document.createElement('div');
         rowDiv.classList.add('row');
-        cont.appendChild(rowDiv)
+        cont.appendChild(rowDiv);
         for (let n = 0; n < input; n++) {
 
 
 
-            const colDiv = document.createElement('div');
+            window.colDiv = document.createElement('div');
             colDiv.classList.add('col');
             rowDiv.appendChild(colDiv);
 
-
-            // Create a new div element with the class row
         }
     }
+    const box = document.querySelectorAll('.col');
+
+    // Create a new div element with the class row
+    box.forEach((col) => {
+        col.addEventListener("mouseover", () => {
+            if (btnClor == "black") {
+                col.style.backgroundColor = 'black';
+            }
+            else if (btnClor === "random") {
+                col.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 50%)`;
+            }
+            else {
+                col.style.backgroundColor = '#fff';
+            }
+
+
+        })
+
+
+    })
+}
+function erase() {
+    document.querySelector('input[type="text"]').value = '';
+    let divs = cont.querySelectorAll('div');
+    divs.forEach((div) => div.remove());
 }
 
-const box = document.querySelectorAll('.col');
-
-box.forEach((col) => {
-    col.addEventListener("mouseover", () => {
-
-
-        col.style.backgroundColor = 'black';
-    })
-
-
-})
 
 const btn = document.querySelectorAll('button');
 let btnClor = ""
@@ -42,13 +55,11 @@ btn.forEach((button) => {
 
     // and for each one we add a 'click' listener
     button.addEventListener('click', () => {
-        // if (button.id == "black") { 
-        //     let btnClor = button.id;
-        // }
-        // else if(button.id == "eraser"){
-        //     col.style.backgroundColor = '#fff';
-        // }
+
         btnClor = button.id;
+        if (btnClor == "clear") {
+            erase();
+        }
 
     })
 })
